@@ -1,12 +1,15 @@
 package JavaAutoQA;
 
+import HomeWork2.CountChars;
 import HomeWork2.HorizontalPyramid;
+import HomeWork2.JavaRegex;
 import HomeWork2.LeapYear;
 
+import java.util.Map;
 import java.util.Scanner;
 
 /**
- * Hello world!
+ * Hello world, fuckers ;)
  *
  */
 public class App 
@@ -15,13 +18,26 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
         //LeapYear
-        //System.out.println((LeapYear.isLeapYear(scanner.nextInt())));
+        System.out.println("LeapYear");
+        System.out.println(LeapYear.isLeapYear(scanner.nextInt()));
 
         //Horizontal Pyramid
+        System.out.println("Horizontal Pyramid");
         for(String element : HorizontalPyramid.buildPyramid(scanner.nextInt()))
         {
-            System.out.println(element);
+            //System.out.println(element);
         }
-        //System.out.println((HorizontalPyramid.buildPyramid(scanner.nextInt())));
+
+        //JavaRegex
+        System.out.println("Sum from a string");
+        System.out.println(JavaRegex.returnOnlyNumbers(scanner.nextLine()));
+
+        //CountChars
+        System.out.println("Character distribution");
+        //System.out.println(CountChars.countCharsInString(scanner.nextLine())); //can print like that as well.
+        for(Map.Entry<Character, Integer> element : CountChars.countCharsInString(scanner.nextLine()).entrySet())
+        {
+        System.out.println(element.getKey() + ":" + element.getValue());
+        }
     }
 }
