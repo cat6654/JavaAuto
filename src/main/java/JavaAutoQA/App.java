@@ -4,8 +4,7 @@ import HomeWork2.*;
 
 import javax.swing.*;
 import java.io.Reader;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Hello world, fuckers ;)
@@ -48,5 +47,36 @@ public class App
         game.setResizable(false);
         game.setLocationRelativeTo(null);
 
+        //Subsequence
+        System.out.println("Subsequence. give me two lists, Buddy");
+        List<Integer> listOne = new ArrayList<Integer>();
+        List<Integer> listTwo = new ArrayList<Integer>();
+        Random rand = new Random();
+
+        listOne.add(rand.nextInt(10));
+        listOne.add(rand.nextInt(10));
+        listOne.add(rand.nextInt(10));
+        listOne.add(rand.nextInt(10));
+        listOne.add(rand.nextInt(10));
+        listOne.add(rand.nextInt(10));
+        listOne.add(rand.nextInt(10));
+
+        listTwo.add(rand.nextInt(10));
+        listTwo.add(rand.nextInt(10));
+        listTwo.add(rand.nextInt(10));
+
+        System.out.print("ListOne: ");
+        for(Integer list1Element : listOne)
+        {
+            System.out.print(list1Element + ",");
+        }
+        System.out.println("");
+        System.out.print("ListTwo: ");
+        for(Integer list1Element : listTwo)
+        {
+            System.out.print(list1Element + ",");
+        }
+        System.out.println("");
+        System.out.println(SubSequence.checkSubSequence(listOne, listTwo));
     }
 }
