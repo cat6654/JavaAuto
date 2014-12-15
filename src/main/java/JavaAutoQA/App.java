@@ -14,7 +14,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        /*Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         //LeapYear
         System.out.println("LeapYear");
         System.out.println(LeapYear.isLeapYear(scanner.nextInt()));
@@ -36,7 +36,7 @@ public class App
         for(Map.Entry<Character, Integer> element : CountChars.countCharsInString(scanner.nextLine()).entrySet())
         {
         System.out.println(element.getKey() + ":" + element.getValue());
-        }*/
+        }
 
         //Simple game
         SimpleGame game = new SimpleGame("Guess a number");
