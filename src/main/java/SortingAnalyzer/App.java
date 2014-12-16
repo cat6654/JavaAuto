@@ -1,5 +1,7 @@
 package SortingAnalyzer;
 
+import LinkedCollection.LinkedList;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -15,7 +17,8 @@ import java.util.regex.Pattern;
  */
 public class App {
     public static void main(String[] args) throws FileNotFoundException {
-        List<Integer> unsortedList = new ArrayList<Integer>();
+        LinkedList unsortedLinkedListOne = new LinkedList();
+        LinkedList unsortedLinkedListTwo = new LinkedList();
         Pattern pattern = Pattern.compile("\\d+");
 
         Scanner scanner = new Scanner(new FileInputStream(("src/main/java/SortingAnalyzer/data.txt")));
@@ -23,7 +26,8 @@ public class App {
             while (scanner.hasNext()) {
                 Matcher matcher = pattern.matcher(scanner.next());
                 while (matcher.find()) {
-                    unsortedList.add(Integer.parseInt(matcher.group()));
+                    unsortedLinkedListOne.add(Integer.parseInt(matcher.group()));
+                    unsortedLinkedListTwo.add(Integer.parseInt(matcher.group()));
                 }
             }
         }
@@ -32,8 +36,19 @@ public class App {
         }finally {
             scanner.close();
         }
-        for (Integer element : unsortedList){
-            System.out.println(element);
-        }
+        //for(int i =0; i < unsortedLinkedList.size(); i++ ){
+        //    System.out.println(unsortedLinkedList.get(i));
+        //}
+        Sorting.bubbleSort(unsortedLinkedListOne);
+        System.out.println("Sorted with Bubble Sort");
+        //for(int i =0; i < unsortedLinkedList.size(); i++ ){
+        //    System.out.println(unsortedLinkedList.get(i));
+        //}
+        System.out.println("Bubble sorting results. Writes: " + unsortedLinkedListOne.writes + " " + "Reads: " + unsortedLinkedListOne.reads);
+        Sorting.selectionSort(unsortedLinkedListTwo);
+        System.out.println("Sorted with Selection Sort");
+        System.out.println("Selection sorting results. Writes: " + unsortedLinkedListTwo.writes + " " + "Reads: " + unsortedLinkedListTwo.reads);
+
+
     }
 }

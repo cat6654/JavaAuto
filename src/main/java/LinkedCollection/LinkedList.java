@@ -12,6 +12,8 @@ public class LinkedList
 {
     private Node head;
     private int listCount;
+    public int writes = 0;
+    public int reads = 0;
 
     public LinkedList() {
         head = new Node(null);
@@ -41,6 +43,17 @@ public class LinkedList
         listCount++;
     }
 
+    public void set(Object data, int index) {
+        Node current = head.getNext();
+        for(int i = 0; i < index; i++)
+        {
+            if(current.getNext() == null) break;
+            current = current.getNext();
+        }
+        current.setData(data);
+        writes++;
+    }
+
     public Object get(int index) {
         if(index < 0)
             return null;
@@ -49,9 +62,9 @@ public class LinkedList
         for(int i = 0; i < index; i++)
         {
             if(current.getNext() == null) return null;
-
             current = current.getNext();
         }
+        reads++;
         return current.getData();
     }
 
