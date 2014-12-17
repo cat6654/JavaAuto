@@ -17,7 +17,8 @@ public class App
         Scanner scanner = new Scanner(System.in);
         //LeapYear
         System.out.println("LeapYear");
-        System.out.println(LeapYear.isLeapYear(scanner.nextInt()));
+        LeapYear checkLeapYear= new LeapYear();
+        System.out.println(checkLeapYear.isLeapYear(scanner.nextInt()));
 
         //Horizontal Pyramid
         System.out.println("Horizontal Pyramid");
@@ -28,12 +29,13 @@ public class App
 
         //JavaRegex
         System.out.println("Sum from a string");
-        System.out.println(JavaRegex.returnOnlyNumbers(scanner.nextLine()));
+        JavaRegex javaRegex = new JavaRegex();
+        System.out.println(javaRegex.getSumFromString(scanner.nextLine()));
 
         //CountChars
         System.out.println("Character distribution");
-        //System.out.println(CountChars.countCharsInString(scanner.nextLine())); //can print like that as well.
-        for(Map.Entry<Character, Integer> element : CountChars.countCharsInString(scanner.nextLine()).entrySet())
+        CountChars countChars = new CountChars();
+        for(Map.Entry<Character, Integer> element : countChars.getDistribution(scanner.nextLine()).entrySet())
         {
         System.out.println(element.getKey() + ":" + element.getValue());
         }
@@ -77,6 +79,7 @@ public class App
             System.out.print(list1Element + ",");
         }
         System.out.println("");
-        System.out.println(SubSequence.checkSubSequence(listOne, listTwo));
+        SubSequence subS = new SubSequence();
+        System.out.println(subS.isSubSequence(listOne, listTwo));
     }
 }

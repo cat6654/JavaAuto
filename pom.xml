@@ -14,5 +14,10 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
+    <dependency>
+      <groupId>automation.training</groupId>
+      <artifactId>task-adapters</artifactId>
+      <version>1.0</version>
+    </dependency>
   </dependencies>
 </project>
