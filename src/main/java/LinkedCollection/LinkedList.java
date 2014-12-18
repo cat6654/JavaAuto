@@ -71,11 +71,24 @@ public class LinkedList<E> implements Collection<E> {
             return false;
 
         Node current = head;
-        for(int i = 1; i < index; i++)
-        {
+        for(int i = 1; i < index; i++) {
             if(current.getNext() == null)
                 return false;
 
+            current = current.getNext();
+        }
+        current.setNext(current.getNext().getNext());
+        listCount--;
+        return true;
+    }
+
+    @Override
+    public boolean remove(Object o) {
+        Node current = head;
+        while(!current.getNext().data.equals(o)) {
+            if(current.getNext() == null){
+                return false;
+            }
             current = current.getNext();
         }
         current.setNext(current.getNext().getNext());
@@ -117,23 +130,6 @@ public class LinkedList<E> implements Collection<E> {
         return a;
     }
 
-    @Override
-    public boolean remove(Object o) {
-        if (o == null) {
-            for (int index = 0; index < this.size(); index++)
-                if (this.toArray()[index] == null) {
-                    this.remove(index);
-                    return true;
-                }
-        } else {
-            for (int index = 0; index < this.size(); index++)
-                if (o.equals(this.toArray()[index])) {
-                    this.remove(index);
-                    return true;
-                }
-        }
-        return false;
-    }
 
     @Override
     public boolean containsAll(Collection<?> c) {
@@ -168,7 +164,7 @@ public class LinkedList<E> implements Collection<E> {
     public boolean contains(Object data) {
         Node current = head.getNext();
         while(current != null) {
-            if(current.data.toString() == (data.toString())) return true;
+            if(current.data.equals(data)) return true;
             current = current.getNext();
         }
         return false;

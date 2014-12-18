@@ -12,16 +12,17 @@ public class App {
         linkedList.add("whatever something");
         linkedList.add("maybe last something");
 
+        linkedList.remove("first something");
         System.out.println("linked list size is : " + linkedList.size());
-        System.out.println("linked list contains 'whatever': " + linkedList.contains("whatever"));
+        //System.out.println("linked list contains 'whatever': " + linkedList.contains("whatever"));
 
         for(int i =0; i < linkedList.size(); i++ ){
             System.out.println(linkedList.get(i));
         }
 
-        for(Object element : linkedList.toArray()) {
-            System.out.println("to array : " + element);
-        }
+        //for(Object element : linkedList.toArray()) {
+          //  System.out.println("to array : " + element);
+        //}
 
     }
 }
