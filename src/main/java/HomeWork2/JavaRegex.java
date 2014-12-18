@@ -13,13 +13,19 @@ import java.util.regex.Pattern;
 public class JavaRegex implements StringSumAlgorithm {
     public double getSumFromString(String inputString){
         double sum = 0;
-        Pattern pattern = Pattern.compile("\\d+");
-        Matcher matcher = pattern.matcher(inputString);
-        while (matcher.find())
+        Pattern patternDouble = Pattern.compile("\\d+[.]\\d+");
+        Pattern patternInt = Pattern.compile("\\d+");
+        Matcher matcherDouble  = patternDouble.matcher(inputString);
+        while (matcherDouble.find())
         {
-            sum+= Integer.parseInt(matcher.group());
+            sum+= Double.parseDouble(matcherDouble.group());
+            inputString = inputString.replace(matcherDouble.group(),"");
         }
-        // casting back to string here.... because... I can )
+        Matcher matcherInt = patternInt.matcher(inputString);
+        while (matcherInt.find())
+        {
+            sum+= Double.parseDouble(matcherInt.group());
+        }
         return sum;
     }
 
