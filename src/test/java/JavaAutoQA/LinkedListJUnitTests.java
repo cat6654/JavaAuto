@@ -8,6 +8,7 @@ import org.junit.Test;
  * Created by akosatuchenko on 12/18/2014.
  */
 public class LinkedListJUnitTests {
+
     @Test
     public void TestLinkedListAdd(){
         LinkedList<String> linkedList = new LinkedList<String>();

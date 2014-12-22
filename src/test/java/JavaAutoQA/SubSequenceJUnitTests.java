@@ -1,16 +1,33 @@
 package JavaAutoQA;
 
+import HomeWork2.JavaRegex;
 import HomeWork2.SubSequence;
 import org.junit.Assert;
 import org.junit.Test;
+import org.junit.runners.Parameterized;
+import tasks.StringSumAlgorithm;
+import tasks.SubSequenceAlgorithm;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 /**
  * Created by Alexander on 18.12.2014.
  */
 public class SubSequenceJUnitTests {
+
+
+    @Parameterized.Parameter
+    public SubSequenceAlgorithm sub = new SubSequence();
+
+    @Parameterized.Parameters
+    public static Collection<Object[]> data() {
+        ArrayList<Object[]> params = new ArrayList<>();
+        params.add(new Object[]{new SubSequence()});
+        return params;
+    }
+
     @Test
     public void TestSubSequencePositive(){
         List<Integer> listOne = new ArrayList<Integer>();
@@ -25,7 +42,6 @@ public class SubSequenceJUnitTests {
         listTwo.add(3);
         listTwo.add(500);
 
-        SubSequence sub = new SubSequence();
         Assert.assertTrue("List two is subSequence of list one. " , sub.isSubSequence(listOne, listTwo));
     }
 
@@ -43,7 +59,6 @@ public class SubSequenceJUnitTests {
         listTwo.add(3);
         listTwo.add(1);
 
-        SubSequence sub = new SubSequence();
         Assert.assertFalse("List two is  Not subSequence of list one. " , sub.isSubSequence(listOne, listTwo));
     }
 }
