@@ -14,10 +14,30 @@
       <version>4.11</version>
       <scope>test</scope>
     </dependency>
+
     <dependency>
       <groupId>automation.training</groupId>
       <artifactId>task-adapters</artifactId>
       <version>1.0</version>
     </dependency>
+
+    <dependency>
+      <groupId>org.apache.wink</groupId>
+      <artifactId>wink-client</artifactId>
+      <version>1.4</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.codehaus.jackson</groupId>
+      <artifactId>jackson-mapper-asl</artifactId>
+      <version>1.9.13</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>1.6.2</version>
+    </dependency>
+
   </dependencies>
 </project>
