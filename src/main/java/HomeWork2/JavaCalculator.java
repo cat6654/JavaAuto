@@ -4,10 +4,11 @@ package HomeWork2;
  * Stolen from internet on 12/10/2014.
  * http://stackoverflow.com/questions/4298716/simple-gui-java-calculator
  */
-import java.awt.*;
-import java.awt.event.*;
 import javax.swing.*;
-import java.util.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 
 public class JavaCalculator extends JFrame {
     private JButton jbtNum1;

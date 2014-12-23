@@ -1,14 +1,10 @@
 package HomeWork2;
 
-import com.sun.xml.internal.ws.util.StringUtils;
+
 import tasks.CharacterDistributionAlgorithm;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  * Created by akosatuchenko on 12/10/2014.

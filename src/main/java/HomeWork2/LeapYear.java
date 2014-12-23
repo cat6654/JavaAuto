@@ -1,9 +1,7 @@
 package HomeWork2;
 
-import org.omg.CORBA.portable.ApplicationException;
-import tasks.LeapYearAlgorithm;
 
-import java.util.Date;
+import tasks.LeapYearAlgorithm;
 
 /**
  * Created by akosatuchenko on 12/9/2014.
