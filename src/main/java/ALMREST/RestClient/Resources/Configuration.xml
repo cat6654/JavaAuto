@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='us-ascii'?>
+<root>
+    <Scheme>http</Scheme>
+    <Server>myd-vm04769.hpswlabs.adapps.hp.com</Server>
+    <Port>8080</Port>
+    <User>sa</User>
+    <Password></Password>
+    <Domain>ALEX_K</Domain>
+    <Project>sql</Project>
+    <ReadOnlyUser>guest</ReadOnlyUser>
+</root>
