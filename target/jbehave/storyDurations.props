@@ -1,0 +1,4 @@
+#org.jbehave.core.embedder.StoryManager
+#Thu Dec 25 16:50:23 EET 2014
+total=5000
+stories/AlmRestCRUD.story=5000

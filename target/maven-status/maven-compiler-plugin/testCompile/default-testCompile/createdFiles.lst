@@ -1,0 +1,12 @@
+JavaAutoQA\ParametrizedTest.class
+JavaAutoQA\StringSumJUnitTests.class
+RestClient\Utils\ConnectionProperties.class
+JavaAutoQA\SubSequenceJUnitTests.class
+JavaAutoQA\LeapYearJUnitTests.class
+RestClient\Steps\AlmRestSteps.class
+RestClient\Tests\AlmRestCRUDTest.class
+RestClient\Runner\StoriesRunner.class
+RestClient\AlmRestClient.class
+RestClient\Utils\CookieStorage.class
+JavaAutoQA\LinkedListJUnitTests.class
+JavaAutoQA\CharacterDistributionJUnitTests.class
